@@ -1,0 +1,113 @@
+:root {
+    --darkBlue-1: #143D60;
+    --darkBlue-2: #27445D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: lavender;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 30px 30px;
+    border-radius: 50px;
+}
+
+.header {
+    background-color: var(--darkBlue-1);
+    width: 400px;
+    align-self: center;
+    height: 150px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 60px;
+ padding-bottom: 8px;
+}
+
+.header div {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 300;
+    padding-bottom: 6px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    text-transform: capitalize;
+    margin-top: 35px;
+    align-self: center;
+}
+
+.inputContainer {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inputContainer input {
+    height: 35px;
+    width: 280px;
+    padding-left: 10px;
+border: none;
+box-shadow: 0px 4px 4px #d1c4c4;
+border-radius: 8px;
+cursor: pointer;
+}
+
+.inputContainer input:focus {
+    outline: none;
+    border: none;
+}
+
+.signupBtn {
+    height: 50px;
+    width: 300px;
+    align-self: center;
+    margin-top: 50px;
+    background-color: var(--darkBlue-1);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.signupBtn:hover {
+    background-color: var(--darkBlue-2);
+}
+
+.signupBtn:focus {
+    border: none;
+    outline: none;
+}
