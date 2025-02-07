@@ -44,16 +44,18 @@ body {
  padding-bottom: 8px;
 }
 
-.header div {
+.header div, a {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     text-transform: capitalize;
     font-weight: 300;
     padding-bottom: 6px;
-    border-bottom: 1px solid white;
     cursor: pointer;
+    text-decoration: none;
 }
+
+
 
 h2 {
     text-align: center;
@@ -62,6 +64,10 @@ h2 {
     text-transform: capitalize;
     margin-top: 35px;
     align-self: center;
+}
+
+.active {
+    border-bottom: 1px solid white; 
 }
 
 .inputContainer {
@@ -74,7 +80,7 @@ h2 {
     gap: 30px;
 }
 
-.inputContainer input {
+.inputContainer input, .messageInput {
     height: 35px;
     width: 280px;
     padding-left: 10px;
@@ -82,14 +88,30 @@ border: none;
 box-shadow: 0px 4px 4px #d1c4c4;
 border-radius: 8px;
 cursor: pointer;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
 }
 
-.inputContainer input:focus {
+
+
+.messageInput::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.inputContainer input:focus, .messageInput {
     outline: none;
     border: none;
 }
 
-.signupBtn {
+.messageInput {
+padding: 15px 20px;
+height: 240px;
+margin-top: 40px;
+align-self: center;
+}
+
+.signupBtn, .sendMessageBtn {
     height: 50px;
     width: 300px;
     align-self: center;
@@ -103,11 +125,23 @@ cursor: pointer;
     cursor: pointer;
 }
 
-.signupBtn:hover {
+.signupBtn:hover, .sendMessageBtn {
     background-color: var(--darkBlue-2);
 }
 
-.signupBtn:focus {
+.signupBtn:focus, .sendMessageBtn {
     border: none;
     outline: none;
+}
+
+
+@media only screen and (max-width: 470px) and (min-width: 100px) {
+    .container {
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .header ,input, textarea, button {
+        width: 95% !important;
+    }
 }

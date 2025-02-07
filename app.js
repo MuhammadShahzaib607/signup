@@ -9,6 +9,13 @@ let password = document.querySelector("#password")
 let email = document.querySelector("#email")
 let userName = document.querySelector("#userName")
 let btn = document.querySelector(".signupBtn")
+let messagePageBtn = document.querySelector(".message")
+let signupPageBtn = document.querySelector(".signup")
+
+messagePageBtn.addEventListener("click", ()=> {
+signupPageBtn.classList.remove("active")
+messagePageBtn.classList.add("active")
+})
 
 let signup = async ()=> {
     createUserWithEmailAndPassword(auth, email.value, password.value)
@@ -24,7 +31,7 @@ let signup = async ()=> {
       email: email.value,
       password: password.value
     });
-    console.log(userName.value + "aap ka data store hoo gya");
+    console.log(userName.value + " aap ka data store hoo gya");
   } catch (error) {
     alert (error)
   }
